@@ -9,7 +9,7 @@ namespace Mapper.ReflectionMapper;
 internal class ReflectionMapper_V1 : IMapper
 {
     public TDest Map<TSource, TDest>(TSource source) where TDest : new() =>
-        (source == null) 
+        source == null
             ? throw new ArgumentNullException("source is NULL")
             : Map<TDest>(source);
 
